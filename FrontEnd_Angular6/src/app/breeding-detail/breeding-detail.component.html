@@ -1,0 +1,122 @@
+
+<section>
+  
+    <div class="container">
+      <div class="row">
+          <div class="col-md-8" >
+            <div *ngFor="let a of animalPhotos">
+            <div *ngIf="a.animal.id==b.animal.id">
+              <img src="../assets/images/{{a.photo}}" alt="">
+              </div>
+            </div>
+            </div>
+        <div class="col-md-4">
+          <ul>
+            <li>
+              <h5>Specie</h5>
+              <p>{{b.animal.specie}}</p>
+            </li>
+            <li>
+              <h5>Breed</h5>
+              <p>{{b.animal.breed}}</p>
+            </li>
+            <li>
+              <h5>Name</h5>
+              <p>{{b.animal.status}}</p>
+            </li>
+            <li>
+                <h5>age</h5>
+                <p>{{b.animal.age}}</p>
+              </li>
+            <li>
+              <h5>Number Breeding :</h5>
+              <p>5</p>
+            </li>
+            <li>
+              <h5>Number Breeding Success:</h5>
+              <p>3</p>
+            </li>
+            
+            <li>
+                <h5>Chance to have baibes : 80%</h5>
+                <div id="myProgress">
+                    <div id="myBar"> </div>
+                  </div>
+               
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+      <div class="row mt-60 aymen3">
+          <div class="aymen2">
+        <div class="col-md-6">
+            <div class="testimonial-author clearfix">
+                <div class="thumb mb-20 mr-15 pull-left flip">
+                  <img class="img-circle" width="75" alt="" src="../assets/images/{{b.animal.owner.photo}}">
+                </div>
+                <h4 class="author mt-5 ml-15 mb-10 text-uppercase ">{{b.animal.owner.firstName}} {{b.animal.owner.lastName}} </h4>
+                <p>{{b.animal.owner.address.city}} , {{b.animal.owner.address.country}}  &nbsp;&nbsp;   <b style="color: green;"> {{distance}} KM</b></p>
+             
+              </div>
+          <p>{{b.description}}</p>
+        </div>
+        
+      </div>
+        
+        <div class="col-md-6">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="17">
+                <agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+              </agm-map>
+        </div>
+      </div>
+     
+    </div>
+  </section>
+
+
+
+
+  <section class="divider parallax layer-overlay overlay-white-8" style=" background-image: url('../assets/images/bg/bg1.jpg'); width : 100%;">
+    <div class="container-fluid">
+      <div class="section-title">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h3 class="title text-theme-colored">Registration Form</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          
+            <form id="getaquote_form" name="getaquote_form" class="form-transparent mt-20" method="post"(ngSubmit)="createPost(br.id)">
+              <div class="row">
+            
+               
+                <div class="col-sm-12">
+                  <div class="form-group mb-10">
+                    <div class="styled-select">
+                      <select  placeholder="Enter Message" [(ngModel)]="br.animal"  name="animal" class="form-control" required>
+                      
+                      <option  *ngFor="let a of animals" [value]="a.id">{{a.status}}</option>
+                      
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mb-10" >
+                <textarea [(ngModel)]="description" name="description"      class="form-control required"  placeholder="Enter Message" rows="5" aria-required="true"></textarea>
+              </div>
+              <div class="form-group mb-0 mt-20">
+                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+               <button  type="submit" class="btn btn-dark btn-theme-colored text-uppercase send" data-loading-text="Please wait...">Send Request</button> 
+              </div>
+            </form>
+        
+          <!-- Job Form Validation-->
+         
+        </div>
+      </div>
+    </div>
+  </section>

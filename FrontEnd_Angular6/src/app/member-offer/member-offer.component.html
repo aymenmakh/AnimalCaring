@@ -1,0 +1,46 @@
+<section class="divider parallax layer-overlay overlay-dark-4" style=" background-image: url('../assets/images/bg/bg4.jpg'); ">
+  <div class="container">
+    <div class="call-to-action sm-text-center p-0">
+      <div class="row">
+        <div class="col-sm-8">
+          <h2 class="font-22 text-theme-colored">My Breeding Offers</h2>
+          <p class="text-white">Alienum phaedrum torquatos nec eu, vis detraxit periculis ex.</p>
+        </div>
+        <div class="col-sm-4 text-center"> 
+          <a routerLink="/addBreedingOffers"  class="btn btn-gray btn-circled btn-lg mt-30" href="#">Add a new Breeding</a> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br><br>
+
+
+<div class="upcoming-events bg-white-f3 mb-20"  *ngFor="let b of breedingOffers" >
+ 
+    <div class="row">
+      <div class="col-sm-4 pr-0 pr-sm-15"  >
+        <div *ngFor="let a of animalPhotos">
+        <div class="thumb p-15" *ngIf="a.animal.id==b.animal.id">
+          <img class="img-fullwidth"  src="../assets/images/{{a.photo}}" alt="...">
+        </div>
+      </div>
+      </div>
+      <div class="col-sm-4 pl-0 pl-sm-15">
+        <div class="event-details p-15 mt-20">
+          <h4 class="mt-0 text-uppercase font-weight-500">{{b.titre}}</h4>
+          
+          <p>{{b.description}}</p>
+          <a routerLink="/showDetails"  [queryParams]="{ item: b.id }"  class="btn btn-flat btn-dark btn-theme-colored btn-sm mt-10" >Details <i class="fa fa-angle-double-right"></i></a>
+  <br><a class="fa fa-trash-o fa-lg" (click)="deleteItem(b)"></a>
+        </div>
+      </div>
+      
+   
+    
+      
+    
+    </div>
+  </div>
+

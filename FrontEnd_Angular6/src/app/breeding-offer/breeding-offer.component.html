@@ -1,0 +1,124 @@
+<section>
+  
+  <div class="container">
+      <div class="section-title text-center">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="mt-0 line-height-1">Breeding <span class="text-theme-colored"> Offer</span></h2>
+            </div>
+          </div>
+        </div>
+    <div class="row">
+      <div class="col-md-9">
+        <article class="post pb-30">
+          <div class="entry-header">
+            <div class="post-thumb">
+             <img class="img-fullwidth img-responsive" src="../assets/images/magazine/lg2.jpg" alt=""> 
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="entry-content">
+            <h5 class="entry-title text-uppercase mt-0"><a href="#">consectetur adipisicing elit. Illum, temporibus </a></h5>
+            <ul class="list-inline font-12 mb-20 mt-10">
+              <li><i class="fa fa-calendar text-theme-color-2 mr-5"></i> 9/9/2015 </li>
+              <li><i class="fa fa-comments-o text-theme-color-2 ml-5 mr-5"></i> 5 comments</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, temporibus dignissimos. Explicabo minus ad similique. Corporis delectus, blanditiis hic maxime est fugit modi ad sapiente esse inventore dicta, soluta impedit a reiciendis consectetur</p>
+            <ul class="list-inline like-comment pull-left flip font-12">
+              <li><i class="pe-7s-comment"></i>36</li>
+              <li><i class="pe-7s-like2"></i>125</li>
+            </ul>
+            <a href="#" class="pull-right flip text-gray font-13"><i class="fa fa-angle-double-right text-theme-color-2"></i> Read more</a>
+            <div class="clearfix"></div>
+          </div>
+        </article>
+   
+       
+        
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <div class="sidebar sidebar-left mt-sm-30">
+          <div class="widget">
+            <h5 class="widget-title title-dots small"><span>Search box</span></h5>
+           
+            <a class="btn btn-dark btn-theme-colored" data-toggle="tooltip" data-placement="top" title="Tooltip on top" link routerLink="/all"><i class="fa fa-home"></i> Button</a>
+<img  src="../assets/images/preloaders/12.gif"/>
+          </div>
+          <div class="widget">
+            <h5 class="widget-title title-dots small"><span>Top News</span></h5>
+            <div class="latest-posts">
+              <article class="post media-post clearfix pb-0 mb-5">
+                <a class="post-thumb" href="#"><img src="images/magazine/wn-sm1.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Sustainable Construction</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-5">
+                <a class="post-thumb" href="#"><img src="images/magazine/wn-sm2.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Industrial Coatings</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a class="post-thumb" href="#"><img src="images/magazine/wn-sm4.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Storefront Installations</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="pricing" data-bg-img="../assets/images/pattern/p8.png">
+  <div class="container">
+    <div class="section-title text-center">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="mt-0 line-height-1">Breeding <span class="text-theme-colored"> Offer</span></h2>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-content">
+      <div class="row">
+        
+     
+
+        <div class="col-xs-12 col-sm-6 col-md-4 hvr-float-shadow mb-sm-30"  *ngFor="let b of breedingOffers"  >
+          <div class="pricing-table text-center maxwidth400" data-bg-img="images/pattern/p6.png">
+            <div  *ngFor="let a of animalPhotos" > 
+              <div *ngIf="a.animal.id==b.animal.id"> 
+            <img src="../assets/images/{{a.photo}}" >
+           </div>
+           </div>
+            <h3 class="package-type">{{b.animal.status}}</h3>
+            <h2 class="price text-theme-colored m-10 font-weight-300 font-48"><span class="font-40"></span>{{b.animal.age}} <span class="font-16 text-black">month</span></h2>
+           
+            <a class="btn btn-lg btn-theme-colored text-uppercase btn-block pt-20 pb-20 btn-flat" href="#">Signup</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

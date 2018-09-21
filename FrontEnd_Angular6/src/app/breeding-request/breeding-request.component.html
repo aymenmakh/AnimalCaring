@@ -1,0 +1,50 @@
+<section class="inner-header divider parallax layer-overlay overlay-dark-5" style=" background-image: url('../assets/images/bg/bg1.jpg'); ">
+  <div class="container pt-100 pb-50">
+    <!-- Section Content -->
+    <div class="section-content pt-100">
+      <div class="row"> 
+        <div class="col-md-12">
+          <h3 class="title text-white">Breeding Requests</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+
+
+
+
+<div class="upcoming-events bg-white-f3 mb-20"  *ngFor="let b of breedingRequests" >
+    <div class="row">
+      <div class="col-sm-4 pr-0 pr-sm-15"  >
+      <div    *ngFor="let a of animalPhotos">
+        <div class="thumb p-15"  *ngIf="a.animal.id==b.animal.id">
+          <img class="img-fullwidth" src="../assets/images/{{a.photo}}" alt="...">
+        </div>
+      </div>
+    </div>
+    
+      <div class="col-sm-4 pl-0 pl-sm-15">
+        <div class="event-details p-15 mt-20"  >
+         
+          <p>{{b.description}}</p>
+          <img  src="../assets/images/preloaders/12.gif"/><br>
+<div *ngIf="b.status=='inProgress'">
+   <h3>your request is in progress, please waiting</h3>
+</div>
+
+<div *ngIf="b.status=='confirmed'"  >
+  
+  <a  class="btn btn-flat btn-dark btn-theme-colored btn-sm mt-10" (click)="offer(b.id)" >Details <i class="fa fa-angle-double-right"></i></a>
+        </div>
+        <div *ngIf="b.status=='failed'">
+          
+            <h3>your request is decline :(, sorry</h3>
+         </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>

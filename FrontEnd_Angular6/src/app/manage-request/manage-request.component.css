@@ -1,0 +1,12 @@
+.aymen{
+    width : 400px;
+    height: 400px;
+    position: relative;
+    left: 40%;
+     bottom:40%;
+}
+
+
+agm-map {
+    height: 300px;
+  }

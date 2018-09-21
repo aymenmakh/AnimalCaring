@@ -1,0 +1,84 @@
+<section>
+  
+  <div class="container">
+      <div class="section-title text-center">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h2 class="mt-0 line-height-1">{{b.animal.status}} <span class="text-theme-colored"> Offer</span></h2>
+            </div>
+          </div>
+        </div>
+    <div class="row">
+      <div class="col-md-9">
+        <article class="post pb-30">
+          <div class="entry-header">
+            <div class="post-thumb">
+                <div *ngFor="let a of animalPhotos">
+                    <div *ngIf="a.animal.id==b.animal.id">
+                      <img src="../assets/images/bg/{{a.photo}}" alt="">
+                      </div>
+                    </div>
+            </div>
+          </div>
+          <br>
+          <div class="clearfix" ></div>
+          <div class="entry-content" *ngFor="let br of breedingRequests">
+              <div class="thumb mb-20 mr-15 pull-left flip">
+                  <img class="img-circle" width="75" alt="" src="../assets/images/{{br.animal.owner.photo}}">
+                </div>
+                <h4 class="author mt-5 ml-15 mb-10 text-uppercase ">{{br.animal.owner.firstName}} {{br.animal.owner.LastName}}  </h4>
+                <p>{{br.animal.owner.address.city}},{{br.animal.owner.address.country}}  &nbsp;&nbsp;   <b style="color: green;"> 80 KM</b></p>
+                <p>{{br.description}}</p>
+                <button type="button" routerLink="/manage"  [queryParams]="{ item: br.id }" class="btn btn-success" >Show Details</button>
+            <div class="clearfix"></div>
+            <hr>
+          </div>
+
+         
+        </article>
+
+        
+   
+       
+        
+      </div>
+      <div class="col-sm-12 col-md-3">
+        <div class="sidebar sidebar-left mt-sm-30">
+          <div class="widget">
+            <h5 class="widget-title title-dots small"><span>Search box</span></h5>
+           
+            <a class="btn btn-dark btn-theme-colored" data-toggle="tooltip" data-placement="top" title="Tooltip on top" link routerLink="/all"><i class="fa fa-home"></i> return to home</a>
+<img  src="../assets/images/preloaders/12.gif"/>
+          </div>
+          <div class="widget">
+            <h5 class="widget-title title-dots small"><span>Top News</span></h5>
+            <div class="latest-posts">
+              <article class="post media-post clearfix pb-0 mb-5">
+                <a class="post-thumb" href="#"><img src="../assets/images/magazine/wn-sm1.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Sustainable Construction</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-5">
+                <a class="post-thumb" href="#"><img src="../assets/images/magazine/wn-sm2.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Industrial Coatings</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+              <article class="post media-post clearfix pb-0 mb-10">
+                <a class="post-thumb" href="#"><img src="../assets/images/magazine/wn-sm4.jpg" alt=""></a>
+                <div class="post-right">
+                  <h5 class="post-title mt-0"><a href="#">Storefront Installations</a></h5>
+                  <p>Lorem ipsum dolor sit amet adipisicing elit...</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </section>
+
